@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang = “en-US”>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link href="style.css" rel="stylesheet" type="text/css"/>
+
+		<title>CS 5410 BREAKOUT</title>
+	</head>
+	<body onload = "Breakout.game.initalize();">
+		<div class="backscreen-bg">
+			<video loop muted autoplay class="backscreen-bg__video">
+				<source src="textures/code-rain-short.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div id="main-menu" class="screen">
+			<h1>BREAKOUT</h1>
+			<ul>
+				<li> <button id="main->new-game">New&nbsp;Game</button> </li>
+				<li> <button id="main->high-score">High&nbsp;Scores</button> </li>
+				<li> <button id="main->settings">Settings</button> </li>
+				<li> <button id="main->help">Help</button> </li>
+				<li> <button id="main->about">About</button> </li>
+			</ul>
+		</div>
+		<div id="game-play" class="screen">
+			<canvas id="gameplay-canvas" height="900px" width="1000px"></canvas>
+		</div>
+		<div id="high-score" class="screen">
+			<!-- Currently Placeholder -->
+
+			<h1>High Scores</h1>
+			<ul id="high-score-output"></ul>
+			<ul>
+				<li> <button id="high-score-reset">Reset Scores</button> </li>
+				<li> <button id="high-score->main">Back</button> </li>
+			</ul>
+		</div>
+		<div id="settings" class="screen">
+			<p>Settings</p>
+			<ul>
+				<li> Left: <span id="leftKey-out"></span>&nbsp;<button id="rebind-leftKey">Rebind</button> </li>
+				<li> Right: <span id="rightKey-out"></span>&nbsp;<button id="rebind-rightKey">Rebind</button> </li>
+				<li> Quit: <span id="quitKey-out"></span>&nbsp;<button id="rebind-quitKey">Rebind</button> </li>
+				<li> <button id="set-default">Defaults</button> </li>
+				<li> <button id="settings->main">Back</button> </li>
+			</ul>
+		</div>
+		<div id="help" class="screen">
+			<h1>Help</h1>
+			<p>Keep the ball off of the floor of the game.  You lose a life every time you run out of balls</p>
+			<p>Hit the blocks for points.  Yellow = 1 point, Orange = 2 points, Bule = 3 points, Green = 5 points.</p>
+			<p>You earn 25 bonus points for every line you clear.  You earn a bonus ball every 100 points gained, and your speed will increase after you remove 4 bricks, 12 bricks, 36 bricks, and 62 bricks respectively.</p>
+			<p>You can rebind the controls in the settings menu</p>
+			<ul>
+				<li> <button id="help->main">Back</button> </li>
+			</ul>
+		</div>
+		<div id="about" class="screen">
+			<h1>Made by Vance Larsen for CS 5410</h1>
+			<ul>
+				<li> <button id="about->main">Back</button> </li>
+			</ul>
+		</div>
+
+		<script src="scripts/game.js"></script>
+		<script src="scripts/input.js"></script>
+		<script src="scripts/settings.js"></script>
+		<script src="scripts/random.js"></script>
+		<script src="scripts/ParticleSystem.js"></script>
+		<script src="scripts/graphics.js"></script>
+		<script src="scripts/highscore.js"></script>
+		<script src="scripts/gameplay.js"></script>
+		<script src="scripts/mainmenu.js"></script>
+		<script src="scripts/infoscreens.js"></script>
+	</body>
+</html>

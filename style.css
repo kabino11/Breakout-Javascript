@@ -1,0 +1,153 @@
+/*#199E3C*/
+/*#f5f5f5*/
+
+@font-face {
+    font-family: matrixFont;
+    src: url(textures/MATRIX.ttf);
+}
+
+/*For video background*/
+.backscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.backscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+	.backscreen-bg__video {
+		height: 300%;
+		top: -100%;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	.backscreen-bg__video {
+		width: 300%;
+		left: -100%;
+	}
+}
+
+body {
+	font-family: matrixFont;
+
+	width: 1000px;
+	margin: auto;
+}
+
+ul {
+	margin-top: 150px;
+	list-style-type: none;
+}
+
+#main-menu ul {
+	margin-top: 70px;
+}
+
+#high-score ul {
+	margin-top: 70px;
+}
+
+li {
+	margin-left: -39px;
+	font-size: 60px;
+}
+
+#high-score li {
+	font-size: 45px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 200px;
+}
+
+#main-menu h1 {
+	font-size: 85px;
+	margin-top: 100px;
+	margin-bottom: 55px;
+}
+
+#high-score h1 {
+	font-size: 75px;
+	margin-top: 80px;
+}
+
+#help h1 {
+	font-size: 50px;
+	margin: 80px;
+}
+
+#about h1 {
+	font-size: 50px;
+	margin: 80px;
+}
+
+#settings p {
+	font-size: 50px;
+	margin-left: 50px;
+	text-align: left;
+}
+
+#help p {
+	font-size: 25px;
+}
+
+.screen button {
+	font-size: 25px;
+	font-family: matrixFont;
+	background-color: #0cde0c;
+	border: none;
+	width: 150px;
+	height: 75px;
+	margin-bottom: 35px;
+}
+
+.screen button:hover {
+	background-color: white;
+	width: 160px;
+	height: 80px;
+	margin-bottom: 32px;
+}
+
+.screen {
+	display: none;
+
+	/*color: #0df10d;*/
+	color: #0cde0c;
+
+	border-style: solid;
+
+	width: 1000px;
+	height: 900px;
+	text-align: center;
+	border-style: solid;
+	border-color: #0cde0c;
+	margin-top: 25px;
+}
+
+.screen.active {
+	display: block;
+}
+
+.clear {
+	clear: both;
+}
+
+.center {
+	padding-top: 15px;
+	padding-bottom: 1px;
+	text-align: center;
+	font-size: 25px;
+}
