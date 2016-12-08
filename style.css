@@ -42,6 +42,8 @@
 body {
 	font-family: matrixFont;
 
+	background-color: black;
+
 	width: 1000px;
 	margin: auto;
 }
